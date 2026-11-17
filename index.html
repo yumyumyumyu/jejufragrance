@@ -16,7 +16,7 @@
 <style>
 :root{
   --bg:#F5F1EA; --paper:#FAF8F3; --ink:#4A4A4A; --ink-soft:#7a756d; --line:#d9d2c5;
-  --red:#8E1B2E; --red-l:#F6C9C4; --green:#0F5A3C; --green-l:#CDE6D8; --gold:#C8961E; --brown:#7A4E12; --gold-l:#F3E2B8;
+  --red:#8E1B2E; --red-l:#F6C9C4; --green:#0F5A3C; --green-l:#CDE6D8; --brand:#FD5800; --brand-d:#D94A00; --brand-l:#FFE3D1; --brand-ink:#B83F00; --gold:#C8961E; --brown:#7A4E12; --gold-l:#F3E2B8;
   --serif:'Noto Serif KR',serif; --sans:'Noto Sans KR',system-ui,sans-serif; --latin:'Cormorant Garamond','Noto Serif KR',serif;
   --radius:16px;
 }
@@ -30,7 +30,7 @@ button{font:inherit;cursor:pointer}
 .serif{font-family:var(--serif)}
 .latin{font-family:var(--latin);letter-spacing:.06em}
 .caps{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)}
-.t-red{--c:var(--red);--cl:var(--red-l)} .t-green{--c:var(--green);--cl:var(--green-l)} .t-gold{--c:var(--brown);--cl:var(--gold-l);--c2:var(--gold)}
+.t-red{--c:var(--red);--cl:var(--red-l)} .t-green{--c:#0F5A3C;--cl:#CDE6D8} .t-gold{--c:var(--brown);--cl:var(--gold-l);--c2:var(--gold)}
 
 /* header */
 .topbar{position:sticky;top:0;z-index:50;background:rgba(245,241,234,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
@@ -40,11 +40,11 @@ button{font:inherit;cursor:pointer}
 .logo span{font-family:var(--latin);font-size:16px;color:var(--ink-soft);letter-spacing:.08em}
 nav.menu{display:flex;gap:26px;align-items:center}
 nav.menu a{text-decoration:none;font-size:14px;color:var(--ink)}
-nav.menu a:hover{color:var(--green)}
-nav.menu a.cta{background:var(--green);color:#fff;padding:8px 16px;border-radius:999px}
-nav.menu a.cta:hover{color:#fff;background:#0b4630}
+nav.menu a:hover{color:var(--brand)}
+nav.menu a.cta{background:var(--brand);color:#fff;padding:8px 16px;border-radius:999px}
+nav.menu a.cta:hover{color:#fff;background:var(--brand-d)}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;font-size:20px;color:var(--ink)}
-.notice{background:var(--green);color:#e9f3ee;font-size:13px;text-align:center;padding:7px 16px;letter-spacing:.02em}
+.notice{background:var(--brand);color:#e9f3ee;font-size:13px;text-align:center;padding:7px 16px;letter-spacing:.02em}
 @media (max-width:900px){
   .burger{display:block}
   nav.menu{position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:1px solid var(--line);display:none;padding:8px 20px 16px}
@@ -82,7 +82,7 @@ section{padding:96px 0}
 .fan:hover .mini{transform:none}
 .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:999px;text-decoration:none;font-size:15px;font-weight:500;border:1px solid transparent;transition:.2s}
-.btn.solid{background:var(--c,var(--green));color:#fff}
+.btn.solid{background:var(--c,var(--brand));color:#fff}
 .btn.solid:hover{filter:brightness(.88)}
 .btn.line{border-color:var(--c,var(--ink));color:var(--c,var(--ink));background:transparent}
 .btn.line:hover{background:var(--c,var(--ink));color:#fff}
@@ -108,7 +108,7 @@ section{padding:96px 0}
 .profile li::before{content:"◆";font-size:8px;color:var(--gold);margin-top:7px}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
 .stat{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px 18px;text-align:center}
-.stat b{display:block;font-family:var(--latin);font-size:40px;font-weight:600;color:var(--green);line-height:1.1}
+.stat b{display:block;font-family:var(--latin);font-size:40px;font-weight:600;color:var(--brand);line-height:1.1}
 .stat span{font-size:13px;color:var(--ink-soft)}
 @media (max-width:860px){.story-grid{grid-template-columns:1fr;gap:32px}.stats{grid-template-columns:repeat(2,1fr)}}
 
@@ -141,7 +141,7 @@ section{padding:96px 0}
 .flow-card{border-radius:20px;padding:34px;background:var(--bg);border:1px solid var(--line);position:relative;overflow:hidden}
 .flow-card h3{font-family:var(--serif);font-size:24px;font-weight:700;color:#3b3b3b;margin:6px 0 10px;line-height:1.4}
 .flow-card p{color:var(--ink-soft);font-size:15px}
-.flow-card .quote{font-family:var(--serif);color:var(--green);font-size:17px;margin:18px 0}
+.flow-card .quote{font-family:var(--serif);color:var(--brand);font-size:17px;margin:18px 0}
 .oil-chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 22px}
 .chip{font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px}
 .inhaler-row{display:flex;gap:22px;align-items:center;margin:16px 0 18px}
@@ -153,12 +153,12 @@ section{padding:96px 0}
 /* quiz */
 .quiz-box{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(22px,5vw,48px);max-width:820px;margin:0 auto;box-shadow:0 10px 30px rgba(80,60,30,.06);min-height:420px}
 .progress{height:4px;background:#eee7da;border-radius:4px;overflow:hidden;margin-bottom:28px}
-.progress i{display:block;height:100%;background:var(--green);width:0;transition:width .4s}
-.q-count{font-family:var(--latin);color:var(--green);letter-spacing:.15em;font-size:14px}
+.progress i{display:block;height:100%;background:var(--brand);width:0;transition:width .4s}
+.q-count{font-family:var(--latin);color:var(--brand);letter-spacing:.15em;font-size:14px}
 .q-title{font-family:var(--serif);font-weight:700;font-size:clamp(20px,3vw,26px);color:#3b3b3b;margin:6px 0 24px}
 .opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .opt{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-align:left;font-size:15px;color:var(--ink);transition:.18s;display:flex;gap:12px;align-items:center}
-.opt:hover{border-color:var(--green);background:#f1f7f3}
+.opt:hover{border-color:var(--brand);background:#FFF1E8}
 .opt .em{font-size:20px}
 .quiz-nav{display:flex;justify-content:space-between;margin-top:22px}
 .linkbtn{background:none;border:0;color:var(--ink-soft);font-size:14px;text-decoration:underline;text-underline-offset:3px}
@@ -177,12 +177,12 @@ section{padding:96px 0}
 /* class & label */
 .class-grid,.label-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .info{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
-.info .ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--cl,var(--green-l));color:var(--c,var(--green));margin-bottom:14px}
+.info .ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--cl,var(--brand-l));color:var(--c,var(--brand));margin-bottom:14px}
 .info h3{font-family:var(--serif);font-size:19px;color:#3b3b3b;font-weight:700}
 .info p{font-size:14.5px;color:var(--ink-soft);margin-top:6px}
-.info .meta{font-size:13px;color:var(--c,var(--green));margin-top:12px}
+.info .meta{font-size:13px;color:var(--c,var(--brand));margin-top:12px}
 .label-grid{grid-template-columns:repeat(4,1fr)}
-.free{display:inline-block;margin-top:24px;font-size:14px;color:var(--green);background:var(--green-l);padding:6px 14px;border-radius:999px}
+.free{display:inline-block;margin-top:24px;font-size:14px;color:var(--brand);background:var(--brand-l);padding:6px 14px;border-radius:999px}
 @media (max-width:900px){.class-grid{grid-template-columns:1fr}.label-grid{grid-template-columns:1fr 1fr}}
 
 /* reservation */
@@ -191,11 +191,11 @@ section{padding:96px 0}
 .rstep{padding:20px 0;border-bottom:1px solid #eee7da}
 .rstep:first-child{padding-top:0}.rstep:last-child{border:0;padding-bottom:0}
 .rstep h3{font-size:15px;font-weight:600;color:#3b3b3b;margin-bottom:12px;display:flex;gap:10px;align-items:center}
-.rstep h3 i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:12px}
+.rstep h3 i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:12px}
 .prog-opts{display:grid;gap:8px}
 .radio{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;background:var(--paper)}
-.radio:has(input:checked){border-color:var(--green);background:#f1f7f3}
-.radio input{accent-color:var(--green);margin-top:6px}
+.radio:has(input:checked){border-color:var(--brand);background:#FFF1E8}
+.radio input{accent-color:var(--brand);margin-top:6px}
 .radio b{font-weight:600;font-size:15px}
 .radio small{display:block;color:var(--ink-soft);font-size:13px}
 .cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
@@ -204,23 +204,32 @@ section{padding:96px 0}
 .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
 .cal .dow{font-size:12px;color:var(--ink-soft);padding:4px 0}
 .cal button{border:0;background:var(--paper);border-radius:8px;height:40px;font-size:14px;color:var(--ink)}
-.cal button:hover:not(:disabled){background:var(--green-l)}
+.cal button:hover:not(:disabled){background:var(--brand-l)}
 .cal button:disabled{color:#c9c2b5;background:transparent;cursor:not-allowed;text-decoration:line-through}
-.cal button.sel{background:var(--green);color:#fff}
+.cal button.sel{background:var(--brand);color:#fff}
 .times{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .times button{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:10px 0;font-size:14px}
-.times button.sel{background:var(--green);color:#fff;border-color:var(--green)}
+.times button.sel{background:var(--brand);color:#fff;border-color:var(--brand)}
 .field{display:grid;gap:6px;margin-bottom:12px}
 .field label{font-size:13px;color:var(--ink-soft)}
 .field input,.field select,.field textarea{font:inherit;font-size:15px;padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}
 .field textarea{min-height:80px;resize:vertical}
-.summary{position:sticky;top:88px;background:var(--green);color:#e9f3ee;border-radius:20px;padding:28px}
+.summary{position:sticky;top:88px;background:var(--brand);color:#e9f3ee;border-radius:20px;padding:28px}
 .summary h3{font-family:var(--serif);color:#fff;font-size:20px;margin-bottom:14px}
 .summary dl{display:grid;grid-template-columns:76px 1fr;gap:8px 12px;font-size:14px}
 .summary dt{opacity:.7}
 .summary dd{color:#fff;word-break:keep-all}
-.summary .btn{width:100%;margin-top:22px;background:#fff;color:var(--green)}
+.summary .btn{width:100%;margin-top:22px;background:#fff;color:var(--brand)}
 .summary .note2{font-size:12px;opacity:.75;margin-top:12px}
+.soon{margin-top:28px;display:flex;gap:30px;align-items:center;border:1.5px dashed var(--brand);border-radius:20px;padding:30px 34px;background:#fff}
+.soon svg{flex:none}
+.soon h3{font-family:var(--serif);font-size:24px;font-weight:700;color:#3b3b3b;margin:10px 0 8px}
+.soon h3 small{font-size:17px;color:var(--ink-soft);font-weight:500;margin-left:6px}
+.soon p{color:var(--ink-soft);font-size:15px}
+.badge{display:inline-block;font-size:12px;letter-spacing:.08em;background:var(--brand);color:#fff;border-radius:999px;padding:4px 12px}
+@media (max-width:640px){.soon{flex-direction:column;text-align:center;padding:26px 22px}}
+.ig{color:var(--brand-ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.summary .ig{color:#fff}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);background:#333;color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;transition:.35s;z-index:99;max-width:90vw;text-align:center}
 .toast.show{transform:translateX(-50%) translateY(0)}
 @media (max-width:900px){.resv{grid-template-columns:1fr}.summary{position:static}.times{grid-template-columns:repeat(3,1fr)}}
@@ -232,7 +241,7 @@ section{padding:96px 0}
 .map{border-radius:20px;background:var(--paper);border:1px solid var(--line);min-height:280px;display:grid;place-items:center;text-align:center;color:var(--ink-soft);font-size:14px;padding:24px}
 details{border-bottom:1px solid var(--line);padding:18px 0}
 details summary{cursor:pointer;list-style:none;font-weight:500;font-size:16px;display:flex;justify-content:space-between;gap:16px;color:#3b3b3b}
-details summary::after{content:"+";color:var(--green);font-size:20px;line-height:1}
+details summary::after{content:"+";color:var(--brand);font-size:20px;line-height:1}
 details[open] summary::after{content:"−"}
 details summary::-webkit-details-marker{display:none}
 details p{margin-top:10px;color:var(--ink-soft);font-size:15px}
@@ -381,6 +390,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
       <a href="#diagnosis">AI 향 진단</a>
       <a href="#class">클래스</a>
       <a href="#direction">오시는 길</a>
+      <a href="https://www.instagram.com/scent.connector/" target="_blank" rel="noopener" aria-label="인스타그램 @scent.connector (새 창)">Instagram ↗</a>
       <a href="#reserve" class="cta">예약하기</a>
     </nav>
   </div>
@@ -404,8 +414,8 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
         <div class="mini" data-amulet="camellia"></div>
       </div>
       <div class="btns">
-        <a href="#reserve" class="btn solid" style="--c:var(--green)">날짜 골라 예약하기</a>
-        <a href="https://claude.ai/artifact/GYMSXezcQDTABDEYRopPGH" target="_blank" rel="noopener" class="btn line" style="--c:var(--red)">AI로 나만의 향 취향 진단하기</a>
+        <a href="#reserve" class="btn solid" style="--c:var(--brand)">날짜 골라 예약하기</a>
+        <a href="https://claude.ai/artifact/GYMSXezcQDTABDEYRopPGH" target="_blank" rel="noopener" class="btn line" style="--c:var(--brand-d)">AI로 나만의 향 취향 진단하기</a>
       </div>
     </div>
   </div>
@@ -418,7 +428,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
     <div class="story-grid">
       <div class="reveal">
         <p>제주조향아뜰리에는 제주시청 근처 1층에 자리한 작은 조향 공방입니다. 여행의 기억과 마음속 소망을 이야기해 주시면, 조향사가 1:1로 곁에서 향을 함께 고릅니다.</p>
-        <p>동서양의 길상 문양에서 빌려 온 세 장의 부적 — <b style="color:var(--red)">동백꽃의 붉은 약속</b>, <b style="color:var(--green)">한라 영산의 기원</b>, <b style="color:var(--brown)">성산 일출의 기운</b> — 이 베이스 향수가 되고, 지금의 나를 읽는 AI 향 진단이 마지막 한 방울을 더합니다.</p>
+        <p>동서양의 길상 문양에서 빌려 온 세 장의 부적 — <b style="color:var(--red)">동백꽃의 붉은 약속</b>, <b style="color:var(--brand)">한라 영산의 기원</b>, <b style="color:var(--brown)">성산 일출의 기운</b> — 이 베이스 향수가 되고, 지금의 나를 읽는 AI 향 진단이 마지막 한 방울을 더합니다.</p>
         <p>시향부터 블렌딩, 라벨 인쇄까지 한자리에서. 완성한 레시피는 저장해 두었다가 언제든 다시 만들 수 있습니다.</p>
       </div>
       <aside class="profile reveal" aria-label="조향사 소개">
@@ -460,14 +470,14 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
         <div class="oil-chips" aria-label="추가 조향 오일 예시">
           <span class="chip">오렌지 스위트</span><span class="chip">레몬</span><span class="chip">페퍼민트</span><span class="chip">유칼립투스</span><span class="chip">시더우드</span><span class="chip">제라늄</span><span class="chip">클라리세이지</span><span class="chip">네롤리</span><span class="chip">샌달우드</span><span class="chip">진저</span>
         </div>
-        <a href="https://claude.ai/artifact/GYMSXezcQDTABDEYRopPGH" target="_blank" rel="noopener" class="btn solid" style="--c:var(--green)">AI 진단 받고 오일 추천받기 ↗</a>
+        <a href="https://claude.ai/artifact/GYMSXezcQDTABDEYRopPGH" target="_blank" rel="noopener" class="btn solid" style="--c:var(--brand)">AI 진단 받고 오일 추천받기 ↗</a>
       </article>
       <article class="flow-card reveal">
         <div class="caps">Step 3 · Inhaler</div>
         <h3>주머니 속 작은 숨,<br>아로마 인헤일러</h3>
         <div class="inhaler-row">
           <svg width="44" height="104" style="color:var(--red)" aria-hidden="true"><use href="#art-inhaler"/></svg>
-          <svg width="44" height="104" style="color:var(--green)" aria-hidden="true"><use href="#art-inhaler"/></svg>
+          <svg width="44" height="104" style="color:var(--brand)" aria-hidden="true"><use href="#art-inhaler"/></svg>
           <svg width="44" height="104" style="color:var(--gold)" aria-hidden="true"><use href="#art-inhaler"/></svg>
         </div>
         <p>같은 향을 코 가까이에서 가볍게 들이마시는 휴대용 인헤일러. 베이스 3종 중 하나, 또는 AI 추천 블렌딩으로 만들 수 있습니다.</p>
@@ -476,6 +486,22 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
         <div style="margin-top:22px"><a href="#reserve" class="btn line" style="--c:var(--red)" data-pick="inhaler">인헤일러 클래스 예약</a></div>
       </article>
     </div>
+
+    <article class="soon reveal" aria-label="스머지 스틱 준비 중">
+      <svg width="74" height="150" viewBox="0 0 74 150" fill="none" stroke="var(--brand)" stroke-width="1.4" aria-hidden="true">
+        <path d="M37 146 C30 120 22 80 20 40 C19 22 26 8 37 4 C48 8 55 22 54 40 C52 80 44 120 37 146Z" fill="#FFF1E8"/>
+        <path d="M37 10 V140 M28 30 C32 50 34 90 36 130 M46 30 C42 50 40 90 38 130"/>
+        <path d="M24 28 l-6-8 M50 28 l6-8 M22 48 l-8-5 M52 48 l8-5 M23 70 l-7-3 M51 70 l7-3" />
+        <path d="M24 60 L50 76 M24 76 L50 60 M26 92 L48 106 M26 106 L48 92" stroke="var(--brand-d)"/>
+        <path d="M34 2 c-2-6 2-10 3-14 M40 0 c2-5 -1-8 0-12" opacity=".5"/>
+      </svg>
+      <div>
+        <span class="badge">준비 중 · Coming Soon</span>
+        <h3>스머지 스틱 <small class="latin">Smudge Stick</small></h3>
+        <p>제주의 허브와 편백을 엮어 묶은 스머지 스틱을 준비하고 있습니다. 공간을 비우고 새 기운을 들이는 작은 의식처럼, 세 장의 부적과 함께 쓸 수 있도록 만들고 있어요.</p>
+        <p style="margin-top:10px;font-size:14px">출시 소식은 <a class="ig" href="https://www.instagram.com/scent.connector/" target="_blank" rel="noopener">@scent.connector</a>에서 가장 먼저 알려 드립니다.</p>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -490,7 +516,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
         </div>
         <h3>지금의 나에게 맞는 향은?</h3>
         <p style="color:var(--ink-soft);margin-bottom:24px">소망 · 컨디션 · 취향을 바탕으로 베이스 향수와<br>추가 조향 에센셜 오일을 추천해 드려요.</p>
-        <a class="btn solid" style="--c:var(--green)" href="https://claude.ai/artifact/GYMSXezcQDTABDEYRopPGH" target="_blank" rel="noopener">AI로 나만의 향 취향 진단하기 ↗</a>
+        <a class="btn solid" style="--c:var(--brand)" href="https://claude.ai/artifact/GYMSXezcQDTABDEYRopPGH" target="_blank" rel="noopener">AI로 나만의 향 취향 진단하기 ↗</a>
         <p style="font-size:13px;color:var(--ink-soft);margin-top:16px">진단 결과를 캡처해 예약 시 인스타그램 DM으로 함께 보내 주세요.</p>
       </div>
     </div>
@@ -526,7 +552,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 <!-- RESERVATION -->
 <section id="reserve" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="sec-num">06 Reservation</div><h2>날짜 골라 예약하기</h2><p>예약 내용을 정리해 인스타그램 DM(@scent.connector)으로 보내 주시면 확정 안내를 드립니다. 마지막 예약은 16:00입니다.</p></div>
+    <div class="sec-head reveal"><div class="sec-num">06 Reservation</div><h2>날짜 골라 예약하기</h2><p>예약 내용을 정리해 인스타그램 DM(<a class="ig" href="https://www.instagram.com/scent.connector/" target="_blank" rel="noopener">@scent.connector</a>)으로 보내 주시면 확정 안내를 드립니다. 마지막 예약은 16:00입니다.</p></div>
     <div class="resv">
       <form class="panel reveal" id="resvForm" onsubmit="return false">
         <div class="rstep">
@@ -568,7 +594,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
           <dt>예상 금액</dt><dd id="sPrice">–</dd>
         </dl>
         <button type="button" class="btn" id="sendDM">인스타그램 DM으로 예약하기</button>
-        <p class="note2">버튼을 누르면 예약 내용이 복사되고 @scent.connector 인스타그램이 열립니다. DM 창에 붙여넣기 해 주세요.</p>
+        <p class="note2">버튼을 누르면 예약 내용이 복사되고 <a class="ig" href="https://www.instagram.com/scent.connector/" target="_blank" rel="noopener">@scent.connector</a> 인스타그램이 열립니다. DM 창에 붙여넣기 해 주세요.</p>
       </aside>
     </div>
   </div>
@@ -580,17 +606,17 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
     <div class="sec-head reveal"><div class="sec-num">07 Direction</div><h2>오시는 길</h2><p>제주공항에서 차로 약 15분, 제주시청 정류장에서 도보 3분입니다.</p></div>
     <div class="dir">
       <dl class="reveal">
-        <dt>주소</dt><dd>제주특별자치도 제주시 (상세 주소 준비 중) 1층</dd>
+        <dt>주소</dt><dd>준비 중</dd>
         <dt>운영시간</dt><dd>10:00 – 17:00 (마지막 예약 16:00)</dd>
         <dt>휴무</dt><dd>매주 화요일</dd>
         <dt>주차</dt><dd>인근 공영주차장 이용 · 클래스 참여 시 1시간 무료</dd>
         <dt>대중교통</dt><dd>제주시청 정류장 하차 후 도보 3분</dd>
-        <dt>인스타그램</dt><dd><a href="https://www.instagram.com/scent.connector/" target="_blank" rel="noopener" style="color:var(--red)">@scent.connector</a></dd>
+        <dt>인스타그램</dt><dd><a href="https://www.instagram.com/scent.connector/" target="_blank" rel="noopener" class="ig">@scent.connector</a></dd>
       </dl>
       <div class="map reveal">
         <div>
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0F5A3C" stroke-width="1.4" style="margin:0 auto 10px" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          지도는 주소 확정 후 연결됩니다.<br>정확한 위치는 인스타그램 DM으로 문의해 주세요.
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FD5800" stroke-width="1.4" style="margin:0 auto 10px" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          주소 준비 중입니다.<br>정확한 위치는 <a class="ig" href="https://www.instagram.com/scent.connector/" target="_blank" rel="noopener">@scent.connector</a> DM으로 문의해 주세요.
         </div>
       </div>
     </div>
@@ -604,7 +630,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
     <div class="faq reveal">
       <details><summary>예약 없이 방문해도 되나요?</summary><p>1:1로 진행되는 예약제 공방이라 예약을 권해 드립니다. 빈 시간이 있으면 현장 참여도 가능하니 인스타그램 DM으로 먼저 확인해 주세요.</p></details>
       <details><summary>만든 향수를 비행기에 가지고 탈 수 있나요?</summary><p>100ml 이하 용기라 기내 반입 기준에 맞습니다. 투명 지퍼백에 담아 주세요. 인헤일러도 기내 반입이 가능합니다.</p></details>
-      <details><summary>사진 라벨용 사진은 어떻게 보내나요?</summary><p>예약 후 @scent.connector 인스타그램 DM으로 보내 주시거나, 방문 당일 휴대폰에서 바로 전송해 주셔도 됩니다.</p></details>
+      <details><summary>사진 라벨용 사진은 어떻게 보내나요?</summary><p>예약 후 <a class="ig" href="https://www.instagram.com/scent.connector/" target="_blank" rel="noopener">@scent.connector</a> 인스타그램 DM으로 보내 주시거나, 방문 당일 휴대폰에서 바로 전송해 주셔도 됩니다.</p></details>
       <details><summary>향에 예민한 편인데 괜찮을까요?</summary><p>시향 단계에서 농도를 조절하고, 예민하신 분께는 은은한 비율로 블렌딩해 드립니다. 요청사항에 미리 적어 주세요.</p></details>
       <details><summary>아이와 함께 참여할 수 있나요?</summary><p>8세 이상 어린이는 보호자와 함께 참여할 수 있습니다. 에센셜 오일은 조향사가 희석해 안전하게 다룹니다.</p></details>
       <details><summary>AI 진단 결과는 어떻게 쓰이나요?</summary><p>진단 결과는 베이스 향수와 추가 조향 오일을 고르는 참고 자료로만 쓰입니다. 결과 화면을 캡처해 예약 시 인스타그램 DM으로 함께 보내 주시면 방문 전에 향을 준비해 둡니다.</p></details>
@@ -631,7 +657,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
         <ul>
           <li><a href="https://www.instagram.com/scent.connector/" target="_blank" rel="noopener">Instagram @scent.connector</a></li>
           <li>10:00 – 17:00 · 화요일 휴무</li>
-          <li>문의는 인스타그램 DM으로 받습니다</li>
+          <li>문의는 <a href="https://www.instagram.com/scent.connector/" target="_blank" rel="noopener" style="text-decoration:underline">인스타그램 DM</a>으로 받습니다</li>
         </ul>
       </div>
     </div>
@@ -785,9 +811,11 @@ $('#sendDM').onclick=()=>{
 
 /* ---------- utils ---------- */
 function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),3200);}
-async function copyAndOpen(text,msg){
-  try{await navigator.clipboard.writeText(text);toast(msg);}catch(e){toast('복사가 안 되면 내용을 직접 적어 DM으로 보내 주세요.');}
-  window.open(IG,'_blank','noopener');
+function copyAndOpen(text,msg){
+  /* 클릭 즉시 새 창을 열어야 모바일에서 팝업 차단 없이 인스타그램이 바로 열립니다 */
+  if(navigator.clipboard) navigator.clipboard.writeText(text).then(()=>toast(msg),()=>toast('복사가 안 되면 내용을 직접 적어 DM으로 보내 주세요.'));
+  const w=window.open(IG,'_blank');
+  if(!w) location.href=IG;
 }
 const burger=$('.burger'), menu=$('#menu');
 burger.onclick=()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'메뉴 닫기':'메뉴 열기');};
